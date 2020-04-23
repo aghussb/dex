@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "dex_tarn": "https://dev.jspm.io/tarn@3",
+    "dex_inherits": "https://dev.jspm.io/inherits@2.0",
+    "dex_events": "https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js",
+    "dex_util": "https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js",
+    "dex_lodash": "https://dev.jspm.io/lodash@4",
+    "dex_debug": "https://dev.jspm.io/debug@4.1.1",
+    "dex_colors": "https://deno.land/std/fmt/colors.ts",
+    "dex_uuid": "https://deno.land/std/uuid/mod.ts",
+    "dex_path": "https://deno.land/std/path/mod.ts",
+    "dex_assert": "https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/assert.js",
+    "dex_url": "https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/url.js",
+    "dex_pgconn": "https://dev.jspm.io/pg-connection-string@2.2.0",
+    "dex_stream": "https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/stream.js"
+  }
+}

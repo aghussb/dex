@@ -1,0 +1,14 @@
+{
+  "name": "@jspm/core",
+  "version": "1.1.0",
+  "description": "jspm core libraries",
+  "author": "Guy Bedford",
+  "license": "Apache 2.0",
+  "files": [
+    "nodelibs/*.js"
+  ],
+  "scripts": {
+    "build": "jspm build -c -d nodelibs -o jspm.importmap src/*"
+  },
+  "type": "module"
+}
