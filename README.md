@@ -22,7 +22,7 @@ There are currently 3 versions of Dex you can use:
 You can install and use Dex by simply importing the library from this repository:
 
 ```javascript
-import Dex from "https://raw.githubusercontent.com/denjucks/dex/master/dex.js";
+import Dex from "https://deno.land/x/dex/dex.js";
 ```
 
 When you first run your JavaScript/TypeScript file, the Dex library will be fetched, cached, and compiled, and will be available to use in your application
@@ -46,7 +46,7 @@ The Dex query builder currently supports the following SQL dialects:
 Below are a few examples of building queries with Dex. Since Dex internally is based on Knex, many of the query building examples on the Knex documentation will work with Dex. See the Knex documentation [here](https://knexjs.org/).
 
 ```javascript
-import Dex from "https://raw.githubusercontent.com/denjucks/dex/master/dex.js";
+import Dex from "https://deno.land/x/dex/dex.js";
 
 // Setting the dialect for the query builder
 let dex = Dex({client: "sqlite3"});
