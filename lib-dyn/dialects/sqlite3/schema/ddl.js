@@ -4,7 +4,7 @@
 // columns and changing datatypes.
 // -------
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const assign = _.assign;
 const chunk = _.chunk;
 const find = _.find;

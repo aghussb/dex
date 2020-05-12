@@ -14,15 +14,17 @@ import TableCompiler from './schema/tablecompiler.js';
 import ColumnBuilder from './schema/columnbuilder.js';
 import ColumnCompiler from './schema/columncompiler.js';
 
-import tarn from 'https://dev.jspm.io/tarn@3';
+import { tarn } from './deps.ts';
 const Pool = tarn.Pool;
 const TimeoutError = tarn.TimeoutError;
-import inherits from 'https://dev.jspm.io/inherits@2.0';
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
-import { promisify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { inherits } from './deps.ts';
+import { events } from './deps.ts';
+const EventEmitter = events.EventEmitter;
+import { util } from './deps.ts';
+const promisify = util.promisify;
 
 import { makeEscape } from './query/string.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const cloneDeep = _.cloneDeep;
 const defaults = _.defaults;
 const uniqueId = _.uniqueId;
@@ -30,7 +32,7 @@ const uniqueId = _.uniqueId;
 import Logger from './logger.js';
 import { KnexTimeoutError } from './util/timeout.js';
 
-import debuglib from 'https://dev.jspm.io/debug@4.1.1';
+import { debug as debuglib } from './deps.ts';
 const debug = debuglib('knex:client');
 const _debugQuery = debuglib('knex:query');
 const debugBindings = debuglib('knex:bindings');

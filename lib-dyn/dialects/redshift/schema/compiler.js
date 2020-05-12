@@ -3,7 +3,7 @@
 // Redshift Table Builder & Compiler
 // -------
 
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import SchemaCompiler_PG from '../../postgres/schema/compiler.js';
 
 function SchemaCompiler_Redshift() {

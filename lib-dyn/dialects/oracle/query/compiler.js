@@ -2,7 +2,7 @@
 
 // Oracle Query Builder & Compiler
 // ------
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const compact = _.compact;
 const identity = _.identity;
 const isEmpty = _.isEmpty;

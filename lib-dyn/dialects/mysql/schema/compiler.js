@@ -1,9 +1,9 @@
 // MySQL Schema Compiler
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts'
 import SchemaCompiler from '../../../schema/compiler.js';
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts'
 const some = _.some;
 
 function SchemaCompiler_MySQL(client, builder) {

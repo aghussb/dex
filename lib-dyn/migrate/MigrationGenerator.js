@@ -1,4 +1,4 @@
-import * as path from "https://deno.land/std/path/mod.ts";
+import { path } from "../deps.ts";
 import { writeJsFileUsingTemplate } from '../util/template.js';
 import { getMergedConfig } from './configuration-merger.js';
 import { ensureDirectoryExists } from '../util/fs.js';

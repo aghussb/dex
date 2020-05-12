@@ -1,5 +1,5 @@
 import Transaction from '../../transaction.js';
-import Debug from 'https://dev.jspm.io/debug@4.1.1';
+import { debug as Debug } from '../../deps.ts';
 
 const debug = Debug('knex:tx');
 

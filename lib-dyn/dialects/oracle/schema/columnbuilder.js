@@ -1,7 +1,7 @@
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import ColumnBuilder from '../../../schema/columnbuilder.js';
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const toArray = _.toArray;
 
 function ColumnBuilder_Oracle() {

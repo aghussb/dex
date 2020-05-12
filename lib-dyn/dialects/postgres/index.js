@@ -1,11 +1,12 @@
 // PostgreSQL
 // -------
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../deps.ts';
 const extend = _.extend;
 const isString = _.isString;
 const map = _.map;
-import { promisify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { util } from '../../deps.ts';
+const promisify = util.promisify;
+import { inherits } from '../../deps.ts';
 import Client from '../../client.js';
 
 import QueryCompiler from './query/compiler.js';

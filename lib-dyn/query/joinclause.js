@@ -1,4 +1,4 @@
-import assert from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/assert.js';
+import { assert } from '../deps.ts';
 
 // JoinClause
 // -------

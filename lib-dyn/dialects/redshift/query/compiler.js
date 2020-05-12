@@ -3,7 +3,7 @@
 import QueryCompiler from '../../../query/compiler.js';
 import QueryCompiler_PG from '../../postgres/query/compiler.js';
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const identity = _.identity;
 const reduce = _.reduce;
 

@@ -1,8 +1,8 @@
 // Redshift
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../deps.ts';
 import Client_PG from '../postgres/index.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../deps.ts';
 const map = _.map;
 
 import Transaction from './transaction.js';

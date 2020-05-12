@@ -1,3 +1,4 @@
-import { promisify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { util } from '../deps.ts';
+const promisify = util.promisify;
 
 export default promisify(setTimeout);

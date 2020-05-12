@@ -1,4 +1,4 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const extend = _.extend;
 const toArray = _.toArray;
 import { addQueryContext } from '../helpers.js';

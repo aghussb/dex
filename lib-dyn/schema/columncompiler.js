@@ -4,7 +4,7 @@
 // -------
 import Raw from '../raw.js';
 import helpers from './helpers.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const groupBy = _.groupBy;
 const first = _.first;
 const has = _.has;

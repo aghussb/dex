@@ -1,6 +1,6 @@
 import Transaction from '../../transaction.js';
 import { timeout, KnexTimeoutError } from '../../util/timeout.js';
-import debuglib from 'https://dev.jspm.io/debug@4.1.1';
+import { debug as debuglib } from '../../deps.ts';
 const debugTx = debuglib('knex:tx');
 
 export default class Oracle_Transaction extends Transaction {

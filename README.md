@@ -12,9 +12,8 @@ Dex is an SQL Query builder for the Deno runtime. Internally Dex is a port of th
 
 There are currently 3 versions of Dex you can use:
 
- * **dex.js**: This version of Dex uses frozen dependencies which have been linked within the repository. I recommend using this version of Dex, since as long as this repository remains up and as long as their are no breaking changes with new versions of Deno, then this version of Dex will remain working.
- * **dex-dyn.js**: This version of Dex uses dynamic dependencies that are pulled from [JSPM.io](https://jspm.io/), the [JSPM Core](https://github.com/jspm/jspm-core) repository, and the [Deno Standard Library](https://deno.land/std/), and use the same semantic versioning that knex uses. The advantage of using this version is that if the dependency maintainers make a bug fix to the dependencies, then these bug fixes will flow through to the dex library when you refresh your Deno cache. However, there is no guarantee that the links to these external dependencies won't break in the future, and if there are any breaking changes in one of these dependencies, then dex may no longer work after the change.
- * **dex-im.js**: This version of Dex is similar to dex-dyn.js, expect that all external dependencies are contained with the **importmap.json** file, and can easily be swapped out if a link breaks or if a breaking change occurs within one of the dependencies. However, you will need to run your application using the **--importmap=importmap.json** flag
+ * **mod.js**: This version of Dex uses frozen dependencies which have been linked within the repository. I recommend using this version of Dex, since as long as this repository remains up and as long as their are no breaking changes with new versions of Deno, then this version of Dex will remain working. This version of Dex works with Deno 1.0.0-rc
+ * **mod-dyn.js**: This version of Dex uses dynamic dependencies that are pulled from [JSPM.io](https://jspm.io/), the [JSPM Core](https://github.com/jspm/jspm-core) repository, and the [Deno Standard Library](https://deno.land/std/), and use the same semantic versioning that knex uses. The advantage of using this version is that if the dependency maintainers make a bug fix to the dependencies, then these bug fixes will flow through to the dex library when you refresh your Deno cache. However, there is no guarantee that the links to these external dependencies won't break in the future, and if there are any breaking changes in one of these dependencies, then dex may no longer work after the change.
 
 
 ## Installation
@@ -22,7 +21,7 @@ There are currently 3 versions of Dex you can use:
 You can install and use Dex by simply importing the library from this repository:
 
 ```javascript
-import Dex from "https://deno.land/x/dex/dex.js";
+import Dex from "https://deno.land/x/dex/mod.ts";
 ```
 
 When you first run your JavaScript/TypeScript file, the Dex library will be fetched, cached, and compiled, and will be available to use in your application
@@ -46,7 +45,7 @@ The Dex query builder currently supports the following SQL dialects:
 Below are a few examples of building queries with Dex. Since Dex internally is based on Knex, many of the query building examples on the Knex documentation will work with Dex. See the Knex documentation [here](https://knexjs.org/).
 
 ```javascript
-import Dex from "https://deno.land/x/dex/dex.js";
+import Dex from "https://deno.land/x/dex/mod.ts";
 
 // Setting the dialect for the query builder
 let dex = Dex({client: "sqlite3"});

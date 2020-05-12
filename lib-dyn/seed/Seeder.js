@@ -1,8 +1,8 @@
 // Seeder
 // -------
 
-import * as path from "https://deno.land/std/path/mod.ts";
-import _ from 'https://dev.jspm.io/lodash@4';
+import { path } from '../deps.ts';
+import { _ } from '../deps.ts';
 const extend = _.extend;
 const includes = _.includes;
 import { readdir, ensureDirectoryExists } from '../util/fs.js';

@@ -1,18 +1,19 @@
 // Raw
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from './deps.ts';
 import helpers from './helpers.js';
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
-import debug from 'https://dev.jspm.io/debug@4.1.1';
+import { events } from './deps.ts';
+const EventEmitter = events.EventEmitter;
+import { debug } from './deps.ts';
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const assign = _.assign;
 const isNumber = _.isNumber;
 const isObject = _.isObject;
 const isPlainObject = _.isPlainObject;
 const reduce = _.reduce;
 import saveAsyncStack from './util/save-async-stack.js';
-import * as uuidlib from "https://deno.land/std/uuid/mod.ts";
+import { uuid as uuidlib } from './deps.ts';
 const uuid = {
 	v1: uuidlib.v1.generate
 }

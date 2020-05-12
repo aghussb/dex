@@ -2,7 +2,7 @@
 
 // MySQL Table Builder & Compiler
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts'
 import TableCompiler from '../../../schema/tablecompiler.js';
 
 // Table Compiler

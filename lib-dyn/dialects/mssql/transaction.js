@@ -1,5 +1,5 @@
 import Transaction from '../../transaction.js';
-import debuglib from 'https://dev.jspm.io/debug@4.1.1';
+import { debug as debuglib} from '../../deps.ts';
 const debug = debuglib('knex:tx');
 
 export default class Transaction_MSSQL extends Transaction {

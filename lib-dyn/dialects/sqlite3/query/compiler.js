@@ -3,7 +3,7 @@
 import QueryCompiler from '../../../query/compiler.js';
 
 import noop from '../../../util/noop.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const constant = _.constant;
 const each = _.each;
 const identity = _.identity;

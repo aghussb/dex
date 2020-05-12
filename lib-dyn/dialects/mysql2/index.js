@@ -1,6 +1,6 @@
 // MySQL2 Client
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../deps.ts';
 import Client_MySQL from '../mysql/index.js';
 import Transaction from './transaction.js';
 

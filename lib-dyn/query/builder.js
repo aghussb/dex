@@ -1,13 +1,15 @@
 // Builder
 // -------
-import assert from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/assert.js';
-import inherits from 'https://dev.jspm.io/inherits@2.0';
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
+import { assert } from '../deps.ts';
+import { inherits } from '../deps.ts';
+import { events } from '../deps.ts';
+const EventEmitter = events.EventEmitter; 
+
 
 import Raw from '../raw.js';
 import helpers from '../helpers.js';
 import JoinClause from './joinclause.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const assign = _.assign;
 const clone = _.clone;
 const each = _.each;

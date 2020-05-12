@@ -1,16 +1,18 @@
 // Transaction
 // -------
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
-import Debug from 'https://dev.jspm.io/debug@4.1.1';
+import { events } from './deps.ts';
+const EventEmitter = events.EventEmitter;
+import { debug as Debug } from './deps.ts';
 
 import makeKnex from './util/make-knex.js';
-import { callbackify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { util } from './deps.ts';
+const callbackify = util.callbackify;
 import { timeout, KnexTimeoutError } from './util/timeout.js';
 import finallyMixin from './util/finally-mixin.js';
 
 const debug = Debug('knex:tx');
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const uniqueId = _.uniqueId;
 
 // FYI: This is defined as a function instead of a constant so that

@@ -1,6 +1,6 @@
 /* eslint max-len:0 */
 
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import utils from '../utils.js';
 import TableCompiler from '../../../schema/tablecompiler.js';
 import helpers from '../../../helpers.js';

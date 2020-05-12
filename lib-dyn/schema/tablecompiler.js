@@ -4,7 +4,7 @@
 // -------
 import { pushAdditional, pushQuery, unshiftQuery } from './helpers.js';
 import helpers from '../helpers.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const groupBy = _.groupBy;
 const indexOf = _.indexOf;
 const isEmpty = _.isEmpty;

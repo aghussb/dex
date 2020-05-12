@@ -1,21 +1,22 @@
 // Oracledb Client
 // -------
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../deps.ts';
 const each = _.each;
 const flatten = _.flatten;
 const isEmpty = _.isEmpty;
 const isString = _.isString;
 const map = _.map;
 const values = _.values;
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../deps.ts';
 import QueryCompiler from './query/compiler.js';
 import ColumnCompiler from './schema/columncompiler.js';
 import { BlobHelper } from './utils.js';
 import Utils from './utils.js';
 const ReturningHelper = Utils.ReturningHelper;
 const isConnectionError = Utils.isConnectionError;
-import stream from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/stream.js';
-import { promisify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { stream } from '../../deps.ts';
+import { util } from '../../deps.ts';
+const promisify = util.promisify;
 import Transaction from './transaction.js';
 import Client_Oracle from '../oracle/index.js';
 import Oracle_Formatter from '../oracle/formatter.js';

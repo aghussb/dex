@@ -1,7 +1,8 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const clone = _.clone;
 const isEmpty = _.isEmpty;
-import { callbackify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { util } from './deps.ts';
+const callbackify = util.callbackify;
 import finallyMixin from './util/finally-mixin.js';
 
 export default function (Target) {

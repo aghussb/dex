@@ -1,8 +1,9 @@
-// Dex.js
+// Dex
 // --------------
 //     (c) 2020-present Anthony Mancini
 //     Dex may be freely distributed under the MIT license.
-//     See the repo for more details: 
+//     For details and documentation:
+//     http://knexjs.org
 
-import dex from './lib-im/index.js';
+import dex from './lib/index.js';
 export default dex;

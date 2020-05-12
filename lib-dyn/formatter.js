@@ -1,6 +1,6 @@
 import QueryBuilder from './query/builder.js';
 import Raw from './raw.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const transform = _.transform;
 
 // Valid values for the `order by` clause generation.

@@ -6,7 +6,7 @@
 // method, pushing everything we want to do onto the "allStatements" array,
 // which is then compiled into sql.
 // ------
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const each = _.each;
 const extend = _.extend;
 const isFunction = _.isFunction;

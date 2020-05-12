@@ -1,4 +1,4 @@
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import ColumnCompiler from '../../../schema/columncompiler.js';
 
 // Column Compiler

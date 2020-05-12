@@ -1,6 +1,6 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const uniq = _.uniq;
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import Raw from '../../../raw.js';
 import ColumnCompiler from '../../../schema/columncompiler.js';
 import Trigger from './trigger.js';

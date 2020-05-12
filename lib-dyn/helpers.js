@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from './deps.ts';
 const isFunction = _.isFunction;
 const isPlainObject = _.isPlainObject;
 const isTypedArray = _.isTypedArray;

@@ -1,7 +1,7 @@
 // Redshift Column Compiler
 // -------
 
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../../../deps.ts';
 import ColumnCompiler_PG from '../../postgres/schema/columncompiler.js';
 
 function ColumnCompiler_Redshift() {

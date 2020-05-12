@@ -1,8 +1,9 @@
 /* eslint no-console:0 */
 
-import * as colors from "https://deno.land/std/fmt/colors.ts";
-import { inspect } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { colors } from './deps.ts';
+import { util } from './deps.ts';
+const inspect = util.inspect;
+import { _ } from './deps.ts';
 const isFunction = _.isFunction;
 const isString = _.isString;
 

@@ -1,10 +1,11 @@
 // MySQL Client
 // -------
-import inherits from 'https://dev.jspm.io/inherits@2.0';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { inherits } from '../../deps.ts';
+import { _ } from '../../deps.ts';
 const defer = _.defer;
 const map = _.map;
-import { promisify } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/util.js';
+import { util } from '../../deps.ts';
+const promisify = util.promisify; 
 import Client from '../../client.js';
 
 import Transaction from './transaction.js';

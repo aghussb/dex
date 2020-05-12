@@ -1,4 +1,4 @@
-import * as path from "https://deno.land/std/path/mod.ts";
+import { path } from "../deps.ts";
 
 export const stat = Deno.stat;
 export const readFile = Deno.readFile;

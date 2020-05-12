@@ -4,9 +4,9 @@ import helpers from '../helpers.js';
 import Raw from '../raw.js';
 import QueryBuilder from './builder.js';
 import JoinClause from './joinclause.js';
-import debug from 'https://dev.jspm.io/debug@4.1.1';
+import { debug } from '../deps.ts';
 
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const assign = _.assign;
 const bind = _.bind;
 const compact = _.compact;
@@ -18,7 +18,7 @@ const isUndefined = _.isUndefined;
 const map = _.map;
 const omitBy = _.omitBy;
 const reduce = _.reduce;
-import * as uuidlib from "https://deno.land/std/uuid/mod.ts";
+import { uuid as uuidlib } from "../deps.ts";
 const uuid = {
 	v1: uuidlib.v1.generate
 }

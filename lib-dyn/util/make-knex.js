@@ -1,10 +1,11 @@
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
+import { events } from '../deps.ts';
+const EventEmitter = events.EventEmitter;
 
 import { Migrator } from '../migrate/Migrator.js';
 import Seeder from '../seed/Seeder.js';
 import FunctionHelper from '../functionhelper.js';
 import QueryInterface from '../query/methods.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const merge = _.merge;
 import batchInsert from './batchInsert.js';
 

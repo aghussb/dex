@@ -1,6 +1,7 @@
-import inherits from 'https://dev.jspm.io/inherits@2.0';
-import { EventEmitter } from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/events.js';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { inherits } from '../deps.ts';
+import { events } from '../deps.ts';
+const EventEmitter = events.EventEmitter;
+import { _ } from '../deps.ts';
 const toArray = _.toArray;
 import { addQueryContext } from '../helpers.js';
 import saveAsyncStack from '../util/save-async-stack.js';

@@ -1,13 +1,13 @@
 // Migrator
 // -------
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const differenceWith = _.differenceWith;
 const get = _.get;
 const isBoolean = _.isBoolean;
 const isEmpty = _.isEmpty;
 const isFunction = _.isFunction;
 const max = _.max;
-import inherits from 'https://dev.jspm.io/inherits@2.0';
+import { inherits } from '../deps.ts';
 import {
   getLockTableName,
   getLockTableNameWithSchema,

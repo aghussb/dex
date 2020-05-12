@@ -1,4 +1,4 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const template = _.template;
 
 const readFile = Deno.readFile;

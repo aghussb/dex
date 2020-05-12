@@ -1,4 +1,4 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../deps.ts';
 const isString = _.isString;
 const tail = _.tail;
 

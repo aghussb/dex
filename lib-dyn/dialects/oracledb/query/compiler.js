@@ -1,4 +1,4 @@
-import _ from 'https://dev.jspm.io/lodash@4';
+import { _ } from '../../../deps.ts';
 const clone = _.clone;
 const each = _.each;
 const isEmpty = _.isEmpty;

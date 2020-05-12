@@ -3,8 +3,8 @@
 // Redshift Table Builder & Compiler
 // -------
 
-import inherits from 'https://dev.jspm.io/inherits@2.0';
-import _ from 'https://dev.jspm.io/lodash@4';
+import { inherits } from '../../../deps.ts';
+import { _ } from '../../../deps.ts';
 const has = _.has;
 import TableCompiler_PG from '../../postgres/schema/tablecompiler.js';
 

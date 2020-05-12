@@ -1,5 +1,5 @@
-import url from 'https://raw.githubusercontent.com/jspm/jspm-core/master/nodelibs/url.js';
-import parse from 'https://dev.jspm.io/pg-connection-string@2.2.0';
+import { url } from '../deps.ts';
+import { pgconn as parse } from '../deps.ts';
 const parsePG = parse;
 const isWindows = Deno.build.os === 'win';
 
