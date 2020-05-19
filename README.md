@@ -53,17 +53,17 @@ let dex = Dex({client: "sqlite3"});
 
 // Creating a table named Users with many types
 let tableQuery = dex.schema.createTable("Users", (table) => {
-	table.increments("userId").primary(); // auto incrementing primary key
-	table.string("username", 32); // varchar of max length 32
-	table.string("firstName"); // varchar of max length 255
-	table.string("lastName"); // varchar of max length 255
-	table.integer("age").unsigned().notNullable(); // unsigned, non-nullable integer
-	table.decimal("funds", 2); // decimal with 2 point precision
-	table.float("lastLoginTime") // floating point number with 8 point precision
-	table.date("joinDate"); // date only (not datetime)
-	table.boolean("isNewUser"); // boolean
-	table.text("description"); // text
-	table.timestamps(null, true); // createdAt and updatedAt datetimes
+    table.increments("userId").primary(); // auto incrementing primary key
+    table.string("username", 32); // varchar of max length 32
+    table.string("firstName"); // varchar of max length 255
+    table.string("lastName"); // varchar of max length 255
+    table.integer("age").unsigned().notNullable(); // unsigned, non-nullable integer
+    table.decimal("funds", 2); // decimal with 2 point precision
+    table.float("lastLoginTime") // floating point number with 8 point precision
+    table.date("joinDate"); // date only (not datetime)
+    table.boolean("isNewUser"); // boolean
+    table.text("description"); // text
+    table.timestamps(null, true); // createdAt and updatedAt datetimes
 }).toString();
 
 console.log(tableQuery);
@@ -80,18 +80,18 @@ console.log(tableQuery);
 
 // Creating and inserting data into the Names table
 tableQuery = dex.schema.createTable("Names", (table) => {
-	table.string("firstname");
-	table.string("lastname");
+    table.string("firstname");
+    table.string("lastname");
 }).toString();
 
 let insertQuery = dex.queryBuilder()
-	.insert([
-		{firstname: "hello", lastname: "world"},
-		{firstname: "deno", lastname: "land"},
-		{firstname: "first", lastname: "last"},
-	])
-	.into("Names")
-	.toString();
+    .insert([
+        {firstname: "hello", lastname: "world"},
+        {firstname: "deno", lastname: "land"},
+        {firstname: "first", lastname: "last"},
+    ])
+    .into("Names")
+    .toString();
 
 console.log(tableQuery);
 console.log(insertQuery);
@@ -145,29 +145,29 @@ console.log(whereQuery);
 
 // Using all of the available dialects with SELECT, WHERE, and LIMIT statements
 const CONFIG_ARRAY = [
-	{client: 'mssql',},
-	{client: 'mysql',},
-	{client: 'mysql2',},
-	{client: 'oracledb',},
-	{client: 'postgres',},
-	{client: 'redshift',},
-	{client: 'sqlite3', useNullAsDefault: true},
+    {client: 'mssql',},
+    {client: 'mysql',},
+    {client: 'mysql2',},
+    {client: 'oracledb',},
+    {client: 'postgres',},
+    {client: 'redshift',},
+    {client: 'sqlite3', useNullAsDefault: true},
 ]
 
 CONFIG_ARRAY.forEach(config => {
-	dex = Dex(config);
-	
-	let sqlQuery = dex.queryBuilder()
-		.select("MyColumn")
-		.from("MyTable")
-		.where({
-			myFirstRow: "Hello",
-			mySecondRow: "World",
-		})
-		.limit(15)
-		.toString();
-	
-	console.log(sqlQuery);
+    dex = Dex(config);
+    
+    let sqlQuery = dex.queryBuilder()
+        .select("MyColumn")
+        .from("MyTable")
+        .where({
+            myFirstRow: "Hello",
+            mySecondRow: "World",
+        })
+        .limit(15)
+        .toString();
+    
+    console.log(sqlQuery);
 });
 
 /**
