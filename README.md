@@ -23,6 +23,7 @@ You can install and use Dex by simply importing the library from this repository
 ```javascript
 import Dex from "https://deno.land/x/dex/mod.ts";
 ```
+> ⚠️ Make sure you are using `deno` version `^1.2.0` to install this executable. You can upgrade running `deno upgrade`.
 
 When you first run your JavaScript/TypeScript file, the Dex library will be fetched, cached, and compiled, and will be available to use in your application
 
@@ -156,7 +157,7 @@ const CONFIG_ARRAY = [
 
 CONFIG_ARRAY.forEach(config => {
     dex = Dex(config);
-    
+
     let sqlQuery = dex.queryBuilder()
         .select("MyColumn")
         .from("MyTable")
@@ -166,7 +167,7 @@ CONFIG_ARRAY.forEach(config => {
         })
         .limit(15)
         .toString();
-    
+
     console.log(sqlQuery);
 });
 
