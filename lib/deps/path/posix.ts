@@ -430,5 +430,8 @@ export function parse(path: string): ParsedPath {
  * are ignored.
  */
 export function fromFileUrl(url: string | URL): string {
-  return new URL(url).pathname;
+  if (typeof url === "string")
+    url = new URL(url);
+
+  return url.pathname
 }
