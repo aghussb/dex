@@ -8,7 +8,7 @@
 
 import type { PassThrough, Duplex } from "https://deno.land/std@0.147.0/node/stream.ts";
 import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
-import type { Pool } from "https://deno.land/x/dex@1.0.2/lib/deps/tarn@3.0.0/dist/Pool.d.ts";
+import type { Pool } from "../lib/deps/tarn@3.0.0/dist/Pool.d.ts";
 import * as ResultTypes from './result.d.ts';
 
 import { ConnectionOptions } from "tls";

@@ -1,7 +1,7 @@
-/// <reference types="node" />
-import { PendingOperation } from './PendingOperation';
-import { Resource } from './Resource';
-import { EventEmitter } from 'events';
+import type { PendingOperation } from './PendingOperation.d.ts';
+import type { Resource } from './Resource.d.ts';
+import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
+
 export interface PoolOptions<T> {
     create: CallbackOrPromise<T>;
     destroy: (resource: T) => any;

@@ -1,4 +1,4 @@
-import { PromiseInspection } from './PromiseInspection';
+import { PromiseInspection } from './PromiseInspection.d.ts';
 export interface Deferred<T> {
     resolve: (val: T) => any;
     reject: <T>(err: T) => any;
