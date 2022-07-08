@@ -11,8 +11,6 @@ import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts"
 import type { Pool } from "../lib/deps/tarn@3.0.0/dist/Pool.d.ts";
 import * as ResultTypes from './result.d.ts';
 
-import { ConnectionOptions } from "tls";
-
 // # Generic type-level utilities
 
 // If T is object then make it a partial otherwise fallback to any
@@ -1840,7 +1838,7 @@ declare namespace Knex {
     statement_timeout?: false | number;
     connectionTimeoutMillis?: number;
     keepAliveInitialDelayMillis?: number;
-    ssl?: boolean | ConnectionOptions;
+    ssl?: boolean | unknown;
   }
 
   type RedshiftConnectionConfig = PgConnectionConfig;
