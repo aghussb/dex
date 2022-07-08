@@ -1,4 +1,4 @@
-import { Deferred } from './utils';
+import { Deferred } from './utils.d.ts';
 export declare class PendingOperation<T> {
     protected timeoutMillis: number;
     possibleTimeoutCause: Error | null;

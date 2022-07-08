@@ -6,14 +6,10 @@
 //                 Shrey Jain <https://github.com/shreyjain1994>
 // TypeScript Version: 3.7
 
-/// <reference types="node" />
-
-import tarn = require('tarn');
-import events = require('events');
-import stream = require('stream');
-import ResultTypes = require('./result');
-
-import { ConnectionOptions } from "tls";
+import type { PassThrough, Duplex } from "https://deno.land/std@0.147.0/node/stream.ts";
+import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
+import type { Pool } from "../lib/deps/tarn@3.0.0/dist/Pool.d.ts";
+import * as ResultTypes from './result.d.ts';
 
 // # Generic type-level utilities
 
@@ -324,7 +320,7 @@ interface PgTableOptions {
 }
 
 interface Knex<TRecord extends {} = any, TResult = unknown[]>
-  extends Knex.QueryInterface<TRecord, TResult>, events.EventEmitter {
+  extends Knex.QueryInterface<TRecord, TResult>, EventEmitter {
   <TRecord2 = TRecord, TResult2 = DeferredKeySelection<TRecord2, never>[]>(
     tableName?: Knex.TableDescriptor | Knex.AliasDict,
     options?: TableOptions
@@ -1368,7 +1364,7 @@ declare namespace Knex {
   // Raw
 
   interface Raw<TResult = any>
-    extends events.EventEmitter,
+    extends EventEmitter,
       ChainableInterface<ResolveResult<TResult>> {
     wrap<TResult2 = TResult>(before: string, after: string): Raw<TResult>;
     toSQL(): Sql;
@@ -1471,16 +1467,16 @@ declare namespace Knex {
     connection(connection: any): this;
     debug(enabled: boolean): this;
     transacting(trx: Transaction): this;
-    stream(handler: (readable: stream.PassThrough) => any): Promise<any>;
+    stream(handler: (readable: PassThrough) => any): Promise<any>;
     stream(
       options: Readonly<{ [key: string]: any }>,
-      handler: (readable: stream.PassThrough) => any
+      handler: (readable: PassThrough) => any
     ): Promise<any>;
-    stream(options?: Readonly<{ [key: string]: any }>): stream.PassThrough;
+    stream(options?: Readonly<{ [key: string]: any }>): PassThrough;
     pipe<T extends NodeJS.WritableStream>(
       writable: T,
       options?: Readonly<{ [key: string]: any }>
-    ): stream.PassThrough;
+    ): PassThrough;
     asCallback(callback: Function): Promise<T>;
   }
 
@@ -1838,11 +1834,11 @@ declare namespace Knex {
     host?: string;
     connectionString?: string;
     keepAlive?: boolean;
-    stream?: stream.Duplex;
+    stream?: Duplex;
     statement_timeout?: false | number;
     connectionTimeoutMillis?: number;
     keepAliveInitialDelayMillis?: number;
-    ssl?: boolean | ConnectionOptions;
+    ssl?: boolean | unknown;
   }
 
   type RedshiftConnectionConfig = PgConnectionConfig;
@@ -1972,7 +1968,7 @@ declare namespace Knex {
   // Clients
   //
 
-  class Client extends events.EventEmitter {
+  class Client extends EventEmitter {
     constructor(config: Config);
     config: Config;
     dialect: string;

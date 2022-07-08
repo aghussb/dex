@@ -1,4 +1,4 @@
-import { Deferred } from './utils';
+import { Deferred } from './utils.d.ts';
 export declare class Resource<T> {
     resource: T;
     readonly timestamp: number;

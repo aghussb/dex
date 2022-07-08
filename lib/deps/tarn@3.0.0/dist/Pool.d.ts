@@ -1,7 +1,7 @@
-/// <reference types="node" />
-import { PendingOperation } from './PendingOperation';
-import { Resource } from './Resource';
-import { EventEmitter } from 'events';
+import type { PendingOperation } from './PendingOperation.d.ts';
+import type { Resource } from './Resource.d.ts';
+import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
+
 export interface PoolOptions<T> {
     create: CallbackOrPromise<T>;
     destroy: (resource: T) => any;
@@ -54,7 +54,7 @@ export declare class Pool<T> {
      * Reaping cycle.
      */
     check(): void;
-    destroy(): Promise<import("./PromiseInspection").PromiseInspection<unknown> | import("./PromiseInspection").PromiseInspection<void>>;
+    destroy(): Promise<import("./PromiseInspection.d.ts").PromiseInspection<unknown> | import("./PromiseInspection.d.ts").PromiseInspection<void>>;
     on(eventName: 'acquireRequest', handler: (eventId: number) => void): void;
     on(eventName: 'acquireSuccess', handler: (eventId: number, resource: T) => void): void;
     on(eventName: 'acquireFail', handler: (eventId: number, err: Error) => void): void;
