@@ -9,9 +9,10 @@
 /// <reference types="node" />
 
 import tarn = require('tarn');
-import events = require('events');
 import stream = require('stream');
-import ResultTypes = require('./result.d.ts');
+
+import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
+import * as ResultTypes from './result.d.ts';
 
 import { ConnectionOptions } from "tls";
 
@@ -324,7 +325,7 @@ interface PgTableOptions {
 }
 
 interface Knex<TRecord extends {} = any, TResult = unknown[]>
-  extends Knex.QueryInterface<TRecord, TResult>, events.EventEmitter {
+  extends Knex.QueryInterface<TRecord, TResult>, EventEmitter {
   <TRecord2 = TRecord, TResult2 = DeferredKeySelection<TRecord2, never>[]>(
     tableName?: Knex.TableDescriptor | Knex.AliasDict,
     options?: TableOptions
@@ -1368,7 +1369,7 @@ declare namespace Knex {
   // Raw
 
   interface Raw<TResult = any>
-    extends events.EventEmitter,
+    extends EventEmitter,
       ChainableInterface<ResolveResult<TResult>> {
     wrap<TResult2 = TResult>(before: string, after: string): Raw<TResult>;
     toSQL(): Sql;
@@ -1972,7 +1973,7 @@ declare namespace Knex {
   // Clients
   //
 
-  class Client extends events.EventEmitter {
+  class Client extends EventEmitter {
     constructor(config: Config);
     config: Config;
     dialect: string;
