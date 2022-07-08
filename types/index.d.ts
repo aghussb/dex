@@ -11,7 +11,7 @@
 import tarn = require('tarn');
 import events = require('events');
 import stream = require('stream');
-import ResultTypes = require('./result');
+import ResultTypes = require('./result.d.ts');
 
 import { ConnectionOptions } from "tls";
 
