@@ -54,7 +54,7 @@ export declare class Pool<T> {
      * Reaping cycle.
      */
     check(): void;
-    destroy(): Promise<import("./PromiseInspection").PromiseInspection<unknown> | import("./PromiseInspection").PromiseInspection<void>>;
+    destroy(): Promise<import("./PromiseInspection.d.ts").PromiseInspection<unknown> | import("./PromiseInspection.d.ts").PromiseInspection<void>>;
     on(eventName: 'acquireRequest', handler: (eventId: number) => void): void;
     on(eventName: 'acquireSuccess', handler: (eventId: number, resource: T) => void): void;
     on(eventName: 'acquireFail', handler: (eventId: number, err: Error) => void): void;
