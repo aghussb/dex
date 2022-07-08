@@ -6,12 +6,9 @@
 //                 Shrey Jain <https://github.com/shreyjain1994>
 // TypeScript Version: 3.7
 
-/// <reference types="node" />
-
-import tarn = require('tarn');
-import stream = require('stream');
-
+import type { PassThrough, Duplex } from "https://deno.land/std@0.147.0/node/stream.ts";
 import type { EventEmitter } from "https://deno.land/std@0.147.0/node/events.ts";
+import type { Pool } from "https://deno.land/x/dex@1.0.2/lib/deps/tarn@3.0.0/dist/Pool.d.ts";
 import * as ResultTypes from './result.d.ts';
 
 import { ConnectionOptions } from "tls";
@@ -1472,16 +1469,16 @@ declare namespace Knex {
     connection(connection: any): this;
     debug(enabled: boolean): this;
     transacting(trx: Transaction): this;
-    stream(handler: (readable: stream.PassThrough) => any): Promise<any>;
+    stream(handler: (readable: PassThrough) => any): Promise<any>;
     stream(
       options: Readonly<{ [key: string]: any }>,
-      handler: (readable: stream.PassThrough) => any
+      handler: (readable: PassThrough) => any
     ): Promise<any>;
-    stream(options?: Readonly<{ [key: string]: any }>): stream.PassThrough;
+    stream(options?: Readonly<{ [key: string]: any }>): PassThrough;
     pipe<T extends NodeJS.WritableStream>(
       writable: T,
       options?: Readonly<{ [key: string]: any }>
-    ): stream.PassThrough;
+    ): PassThrough;
     asCallback(callback: Function): Promise<T>;
   }
 
@@ -1839,7 +1836,7 @@ declare namespace Knex {
     host?: string;
     connectionString?: string;
     keepAlive?: boolean;
-    stream?: stream.Duplex;
+    stream?: Duplex;
     statement_timeout?: false | number;
     connectionTimeoutMillis?: number;
     keepAliveInitialDelayMillis?: number;
